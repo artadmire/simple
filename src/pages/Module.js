@@ -1,9 +1,9 @@
 import React from 'react';
-import { fetchHome } from '../core/api'
+import { fetchJavaScript } from '../core/api'
 import useData from '../core/useData';
 
 const Module = ({staticContext}) => {
-  const [home, setHome] = useData(staticContext, fetchHome, {});
+  const [home, setHome] = useData(staticContext, fetchJavaScript, {});
   return (
     <main>
       <h1>Module page</h1>
@@ -11,5 +11,5 @@ const Module = ({staticContext}) => {
     </main>
   )
 }
-Module.getData = fetchHome;
+Module.getData = fetchJavaScript;
 export default Module

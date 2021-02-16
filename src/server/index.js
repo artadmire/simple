@@ -18,6 +18,7 @@ const app = express();
 const serverRouter = require('./serverRouter');
 const apiRouter = require('./apiRouter')
 
+
 app.use('/api/', apiRouter);
 // build 路径放前面
 app.use('/build' ,express.static('build'));

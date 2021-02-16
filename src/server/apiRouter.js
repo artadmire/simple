@@ -1,21 +1,21 @@
 const express = require('express')
 const router = express.Router();
+const questions = require('./mock/questionsList')
 
 
-
-router.get("/home", function (req, res, next) {
+router.get("/javaScript", function (req, res, next) {
   res.status(200);
-  res.json({name: 'Home'});
+  res.json(questions);
 });
 
-router.get("/user", function (req, res, next) {
+router.get("/html", function (req, res, next) {
   res.status(200);
-  res.json({name: 'User'});
+  res.json({name: 'html'});
 });
 
-router.get("/home", function (req, res, next) {
-  res.status(200);
-  res.json({name: 'Home'});
-});
+// router.get("/javaScript", function (req, res, next) {
+//   res.status(200);
+//   res.json({name: 'Home'});
+// });
 
 module.exports = router

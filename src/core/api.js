@@ -1,7 +1,9 @@
 import axios from 'axios';
 
+let pre = 'http://localhost:3000';
+
 const req = axios.create({
-  baseURL: 'http://localhost:3000/api',
+  baseURL: `${pre}/api`,
   timeout: 2500,
 })
 
@@ -9,5 +11,5 @@ req.interceptors.response.use((response) =>{
   return response.data;
 });
 
-export const fetchHome = () => req.get('/home');
-export const fetchUser = () => req.get('/user');
+export const fetchJavaScript = () => req.get('/javaScript');
+export const fetchHtml = () => req.get('/html');

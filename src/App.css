@@ -1,0 +1,4 @@
+@import '~antd/dist/antd.css';
+.content {
+  padding: 20px 40px;
+}

@@ -1,17 +1,12 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
-import { Tabs } from  'antd'
-import routes from '../core/routes'
-import Nav from './Nav'
-import './App.css'
-
-const { TabPane } = Tabs;
-
-
+import routes from './core/routes'
+import Nav from './components/Nav'
+import './App.css';
 
 const App = () => {
   return (
-    <div>
+    <div className="content">
       <Nav/>
       <Switch>
         {

@@ -1,4 +1,6 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react';
+import { Js } from '../store/action';
+import store from  '../store'
 
 const useData = (staticContext, getData, initial) => {
   const getInitialData = () => {
@@ -18,7 +20,10 @@ const useData = (staticContext, getData, initial) => {
       return;
     }
     if(typeof getData === 'function') {
-      getData().then((data) => console.log(data, 'data'))
+      getData().then((data) => {
+        setData(data);
+        store.dispatch(Js(data.data));
+      })
     }
 
   }, [])

@@ -1,17 +1,26 @@
-import Home from '../components/Home'
-import User from '../components/User'
-import NotFind from '../components/NotFind'
-
+import JavaScript from '../pages/JavaScript'
+import Html from '../pages/Html';
+import Module from '../pages/Module';
+import Detail from '../pages/Detail';
+import NotFind from '../pages/NotFind'
 
 const routes = [
   {
     path: '/',
     exact: true,
-    component: Home,
+    component: JavaScript,
   },
   {
-    path: '/user',
-    component: User,
+    path: '/html',
+    component: Html,
+  },
+  {
+    path: '/module',
+    component: Module,
+  },
+  {
+    path: '/detail',
+    component: Detail,
   },
   {
     path: '',

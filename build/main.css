@@ -28322,4 +28322,18 @@ div.ant-typography-edit-content.ant-typography-rtl {
   margin: 8px 0 0;
   padding: 0;
 }
+.content {
+  padding: 20px 40px;
+}
+.number {
+  color: azure;
+  background: rgb(243, 164, 17);
+  padding: 2px 8px;
+  border-radius: 0 12px 12px 0;
+}
+.number-detail {
+  font-size: 13px;
+  font-weight: 600;
+  margin-right: 4px;
+}
 

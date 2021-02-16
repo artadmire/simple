@@ -5,7 +5,7 @@ const isProductionMode = process.env.NODE_ENV === "production";
 
 module.exports = {
   mode: isProductionMode ? "production" : "development",
-  entry: './src/client.js',
+  entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'build'),
     filename: 'main.js'
@@ -57,4 +57,14 @@ module.exports = {
       filename: "[name].css",
     }),
   ],
+  devServer: {
+    host: '0.0.0.0',
+    port: 8080,
+    proxy: {
+      '/api': {
+        target: 'http://localhost:3000',
+        changeOrigin: true
+      }
+    }
+  }
 };
