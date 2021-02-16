@@ -13,9 +13,5 @@ router.get("/html", function (req, res, next) {
   res.json({name: 'html'});
 });
 
-// router.get("/javaScript", function (req, res, next) {
-//   res.status(200);
-//   res.json({name: 'Home'});
-// });
 
 module.exports = router
